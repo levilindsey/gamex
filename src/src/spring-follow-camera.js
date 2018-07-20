@@ -1,4 +1,4 @@
-import {FollowCamera} from '../../../grafx';
+import {FollowCamera} from 'grafx';
 
 // TODO: Ideally, this would use the built-in physics engine; however, we I tried integrating it
 // before, I noticed some instability when moving at high speeds. This probably had something to do

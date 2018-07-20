@@ -1,4 +1,4 @@
-import {Aabb} from '../../../../physx';
+import { Aabb } from 'lsl-physx';
 
 /**
  * This class represents a wall or floor.
@@ -22,7 +22,7 @@ class Wall extends Aabb {
     let maxY;
     let maxZ;
 
-    let {x, y, z, isOpenOnPositiveSide, thickness, halfSideLength} = wallParams;
+    let { x, y, z, isOpenOnPositiveSide, thickness, halfSideLength } = wallParams;
     thickness = thickness || 80000;
     halfSideLength = halfSideLength || 80000;
 
@@ -30,7 +30,8 @@ class Wall extends Aabb {
       if (isOpenOnPositiveSide) {
         minX = x - thickness;
         maxX = x;
-      } else {
+      }
+      else {
         minX = x;
         maxX = x + thickness;
       }
@@ -38,11 +39,13 @@ class Wall extends Aabb {
       minZ = -halfSideLength;
       maxY = halfSideLength;
       maxZ = halfSideLength;
-    } else if (typeof y === 'number') {
+    }
+    else if (typeof y === 'number') {
       if (isOpenOnPositiveSide) {
         minY = y - thickness;
         maxY = y;
-      } else {
+      }
+      else {
         minY = y;
         maxY = y + thickness;
       }
@@ -50,11 +53,13 @@ class Wall extends Aabb {
       minZ = -halfSideLength;
       maxX = halfSideLength;
       maxZ = halfSideLength;
-    } else {
+    }
+    else {
       if (isOpenOnPositiveSide) {
         minZ = z - thickness;
         maxZ = z;
-      } else {
+      }
+      else {
         minZ = z;
         maxZ = z + thickness;
       }
@@ -79,4 +84,4 @@ class Wall extends Aabb {
   }
 }
 
-export {Wall};
+export { Wall };

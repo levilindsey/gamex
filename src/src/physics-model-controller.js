@@ -1,5 +1,5 @@
-import {isInDevMode, ModelController, StandardModelController, vec3ToString} from '../../../grafx';
-import {PhysicsJob, PhysicsState} from '../../../physx';
+import {isInDevMode, ModelController, StandardModelController, vec3ToString} from 'grafx';
+import {PhysicsJob, PhysicsState} from 'lsl-physx';
 
 /**
  * This class represents a non-collidable physics-based model-controller.

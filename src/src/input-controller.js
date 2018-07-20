@@ -1,4 +1,4 @@
-import {keyCodes} from '../../../grafx';
+import {keyCodes} from 'grafx';
 
 // TODO: Figure out how to capture: tab, space, escape, enter; prevent their default behaviors when
 // listeners have been registered for them.

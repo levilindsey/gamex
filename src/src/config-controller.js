@@ -7,7 +7,7 @@ import {
   hsvToHsl,
   hslToRgb,
   isInt,
-} from '../../../grafx';
+} from 'grafx';
 
 const _SMALL_SCREEN_WIDTH_THRESHOLD = 800;
 

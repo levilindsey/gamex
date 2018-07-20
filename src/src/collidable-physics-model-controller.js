@@ -1,5 +1,5 @@
 import {PhysicsModelController} from './physics-model-controller';
-import {CollidablePhysicsJob, PhysicsJob, PhysicsState} from '../../../physx';
+import {CollidablePhysicsJob, PhysicsJob, PhysicsState} from 'lsl-physx';
 
 /**
  * This class represents a collidable physics-based model-controller.

@@ -3,9 +3,9 @@
  * conveniently accessible via this single module.
  */
 
-export * from '../../animatex';
-export * from '../../grafx';
-export * from '../../physx';
+export * from 'lsl-animatex';
+export * from 'grafx';
+export * from 'lsl-physx';
 
 export * from './src/collidable-physics-model-controller';
 export * from './src/config-controller';

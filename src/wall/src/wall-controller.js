@@ -1,5 +1,5 @@
-import {StandardModelController} from '../../../../grafx';
-import {collidableStore} from '../../../../physx';
+import {StandardModelController} from 'grafx';
+import {collidableStore} from 'lsl-physx';
 
 import {Wall} from './wall-collidable';
 

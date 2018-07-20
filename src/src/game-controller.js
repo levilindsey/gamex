@@ -1,9 +1,9 @@
-import { animator } from '../../../animatex';
+import { animator } from 'lsl-animatex';
 import {
   GrafxController,
   handlePageFocusChange,
 }
-from '../../../grafx';
+from 'grafx';
 import { configController } from './config-controller';
 import { InputController } from './input-controller';
 

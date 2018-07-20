@@ -1,5 +1,5 @@
-import { Scene } from '../../../grafx';
-import { Aabb } from '../../../physx';
+import { Scene } from 'grafx';
+import { Aabb } from 'lsl-physx';
 
 /**
  * This class handles the overall scene.
