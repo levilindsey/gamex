@@ -10,67 +10,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _animationJob = require('./src/animation-job');
+var _src = require('./src');
 
-Object.keys(_animationJob).forEach(function (key) {
+Object.keys(_src).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
-      return _animationJob[key];
+      return _src[key];
     }
   });
 });
 
-var _animator = require('./src/animator');
-
-Object.keys(_animator).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animator[key];
-    }
-  });
-});
-
-var _frameLatencyProfiler = require('./src/frame-latency-profiler');
-
-Object.keys(_frameLatencyProfiler).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _frameLatencyProfiler[key];
-    }
-  });
-});
-
-var _persistentAnimationJob = require('./src/persistent-animation-job');
-
-Object.keys(_persistentAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _persistentAnimationJob[key];
-    }
-  });
-});
-
-var _transientAnimationJob = require('./src/transient-animation-job');
-
-Object.keys(_transientAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _transientAnimationJob[key];
-    }
-  });
-});
-
-},{"./src/animation-job":3,"./src/animator":4,"./src/frame-latency-profiler":5,"./src/persistent-animation-job":6,"./src/transient-animation-job":7}],3:[function(require,module,exports){
+},{"./src":6}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -521,7 +473,7 @@ exports.animator = animator;
  * millisecond.
  */
 
-},{"./frame-latency-profiler":5,"./persistent-animation-job":6,"./transient-animation-job":7}],5:[function(require,module,exports){
+},{"./frame-latency-profiler":5,"./persistent-animation-job":7,"./transient-animation-job":8}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -624,6 +576,73 @@ exports.FrameLatencyProfiler = FrameLatencyProfiler;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _animationJob = require('./animation-job');
+
+Object.keys(_animationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animationJob[key];
+    }
+  });
+});
+
+var _animator = require('./animator');
+
+Object.keys(_animator).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animator[key];
+    }
+  });
+});
+
+var _frameLatencyProfiler = require('./frame-latency-profiler');
+
+Object.keys(_frameLatencyProfiler).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _frameLatencyProfiler[key];
+    }
+  });
+});
+
+var _persistentAnimationJob = require('./persistent-animation-job');
+
+Object.keys(_persistentAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _persistentAnimationJob[key];
+    }
+  });
+});
+
+var _transientAnimationJob = require('./transient-animation-job');
+
+Object.keys(_transientAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _transientAnimationJob[key];
+    }
+  });
+});
+
+},{"./animation-job":3,"./animator":4,"./frame-latency-profiler":5,"./persistent-animation-job":7,"./transient-animation-job":8}],7:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.PersistentAnimationJob = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -677,7 +696,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
 
 exports.PersistentAnimationJob = PersistentAnimationJob;
 
-},{"./animation-job":3}],7:[function(require,module,exports){
+},{"./animation-job":3}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -744,7 +763,7 @@ var TransientAnimationJob = function (_AnimationJob) {
 
 exports.TransientAnimationJob = TransientAnimationJob;
 
-},{"./animation-job":3,"./util":8}],8:[function(require,module,exports){
+},{"./animation-job":3,"./util":9}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -803,9 +822,9 @@ var _util = {
 
 exports._util = _util;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],10:[function(require,module,exports){
+},{"dup":1}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -944,7 +963,7 @@ Object.keys(_wall).forEach(function (key) {
   });
 });
 
-},{"./src/collidable-physics-model-controller":11,"./src/config-controller":12,"./src/game-controller":13,"./src/game-scene":14,"./src/input-controller":15,"./src/physics-model-controller":16,"./src/spring-follow-camera":17,"./wall":18,"grafx":1,"lsl-animatex":2,"lsl-physx":9}],11:[function(require,module,exports){
+},{"./src/collidable-physics-model-controller":12,"./src/config-controller":13,"./src/game-controller":14,"./src/game-scene":15,"./src/input-controller":16,"./src/physics-model-controller":17,"./src/spring-follow-camera":18,"./wall":19,"grafx":1,"lsl-animatex":2,"lsl-physx":10}],12:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1046,7 +1065,7 @@ exports.CollidablePhysicsModelController = CollidablePhysicsModelController;
  * @typedef {RenderableShapeConfig&CollidableShapeConfig} RenderableAndCollidableShapeConfig
  */
 
-},{"./physics-model-controller":16,"lsl-physx":9}],12:[function(require,module,exports){
+},{"./physics-model-controller":17,"lsl-physx":10}],13:[function(require,module,exports){
 'use strict';
 
 var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1777,7 +1796,7 @@ exports.configController = configController;
  * @property {vec3} max
  */
 
-},{"grafx":1}],13:[function(require,module,exports){
+},{"grafx":1}],14:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1980,7 +1999,7 @@ var GameController = function (_GrafxController) {
 
 exports.GameController = GameController;
 
-},{"./config-controller":12,"./input-controller":15,"grafx":1,"lsl-animatex":2}],14:[function(require,module,exports){
+},{"./config-controller":13,"./input-controller":16,"grafx":1,"lsl-animatex":2}],15:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2102,7 +2121,7 @@ var GameScene = function (_Scene) {
 
 exports.GameScene = GameScene;
 
-},{"grafx":1,"lsl-physx":9}],15:[function(require,module,exports){
+},{"grafx":1,"lsl-physx":10}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2344,7 +2363,7 @@ var InputController = function () {
 
 exports.InputController = InputController;
 
-},{"grafx":1}],16:[function(require,module,exports){
+},{"grafx":1}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2599,7 +2618,7 @@ var PhysicsModelController = function () {
 
 exports.PhysicsModelController = PhysicsModelController;
 
-},{"grafx":1,"lsl-physx":9}],17:[function(require,module,exports){
+},{"grafx":1,"lsl-physx":10}],18:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2814,7 +2833,7 @@ var SpringFollowCamera = function (_FollowCamera) {
 
 exports.SpringFollowCamera = SpringFollowCamera;
 
-},{"grafx":1}],18:[function(require,module,exports){
+},{"grafx":1}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2845,7 +2864,7 @@ Object.keys(_wallController).forEach(function (key) {
   });
 });
 
-},{"./src/wall-collidable":19,"./src/wall-controller":20}],19:[function(require,module,exports){
+},{"./src/wall-collidable":20,"./src/wall-controller":21}],20:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2982,7 +3001,7 @@ var Wall = function (_Aabb) {
 
 exports.Wall = Wall;
 
-},{"lsl-physx":9}],20:[function(require,module,exports){
+},{"lsl-physx":10}],21:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3117,6 +3136,6 @@ exports.WallController = WallController;
  * @property {TextureSpan} textureSpan
  */
 
-},{"./wall-collidable":19,"grafx":1,"lsl-physx":9}]},{},[10])
+},{"./wall-collidable":20,"grafx":1,"lsl-physx":10}]},{},[11])
 
 //# sourceMappingURL=gamex.js.map
