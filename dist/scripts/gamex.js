@@ -174,7 +174,7 @@ var Camera = function (_PersistentAnimationJ) {
   _createClass(Camera, [{
     key: 'reset',
     value: function reset() {
-      this._setPerspective(this._cameraParams.fovY, this._cameraParams.defaultAspectRatio, this._cameraParams.zNear, this._cameraParams.zFar);
+      this._setPerspective(this._cameraParams.fovY, this._cameraParams.defaultAspectRatio, this._cameraParams._zNear, this._cameraParams._zFar);
     }
 
     // TODO: Call this after adding support for dynamically switching cameras.
@@ -347,7 +347,7 @@ var Camera = function (_PersistentAnimationJ) {
   }, {
     key: 'aspectRatio',
     set: function set(aspectRatio) {
-      this._setPerspective(this._cameraParams.fovY, aspectRatio, this._cameraParams.zNear, this._cameraParams.zFar);
+      this._setPerspective(this._cameraParams.fovY, aspectRatio, this._cameraParams._zNear, this._cameraParams._zFar);
     }
 
     /** @returns {vec3} */
@@ -396,9 +396,9 @@ exports.Camera = Camera;
 /**
  * @typedef {Function} CameraConfig
  * @property {number} fovY
- * @property {number} zNear
- * @property {number} zFar
  * @property {number} defaultAspectRatio
+ * @property {number} _zNear
+ * @property {number} _zFar
  * @property {vec3} _defaultLookAtDirection
  */
 
