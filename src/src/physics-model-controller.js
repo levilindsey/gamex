@@ -107,7 +107,7 @@ class PhysicsModelController {
   get orientation() {
     return this.physicsJob.currentState.orientation;
   }
-  // FIXME: Can I remove this?
+  // TODO: Can I remove this?
   /** @returns {vec3} */
   get velocity() {
     return this.physicsJob.currentState.velocity;
@@ -121,7 +121,7 @@ class PhysicsModelController {
   get renderOrientation() {
     return this.physicsJob.renderState.orientation;
   }
-  // FIXME: Can I remove this?
+  // TODO: Can I remove this?
   /** @returns {vec3} */
   get renderVelocity() {
     return this.physicsJob.renderState.velocity;

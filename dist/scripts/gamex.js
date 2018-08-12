@@ -14220,6 +14220,7 @@ var ConfigController = function () {
      * @param {MenuFolderConfig} folderConfig
      * @param {dat.gui.GUI} [parentFolder] If not given, the folder is created at the top level.
      * @param {Object} [onChangeListeners] A map from labels to on-change handlers.
+     * @returns {dat.gui.GUI} The folder that was created.
      */
 
   }, {
@@ -14250,6 +14251,8 @@ var ConfigController = function () {
       if (folderConfig.childFolders) {
         this.createFolders(folderConfig.childFolders, folder);
       }
+
+      return folder;
     }
 
     /**
@@ -15566,7 +15569,7 @@ var PhysicsModelController = function () {
     get: function get() {
       return this.physicsJob.currentState.orientation;
     }
-    // FIXME: Can I remove this?
+    // TODO: Can I remove this?
     /** @returns {vec3} */
 
   }, {
@@ -15589,7 +15592,7 @@ var PhysicsModelController = function () {
     get: function get() {
       return this.physicsJob.renderState.orientation;
     }
-    // FIXME: Can I remove this?
+    // TODO: Can I remove this?
     /** @returns {vec3} */
 
   }, {

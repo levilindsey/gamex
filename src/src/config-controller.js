@@ -92,6 +92,7 @@ class ConfigController {
    * @param {MenuFolderConfig} folderConfig
    * @param {dat.gui.GUI} [parentFolder] If not given, the folder is created at the top level.
    * @param {Object} [onChangeListeners] A map from labels to on-change handlers.
+   * @returns {dat.gui.GUI} The folder that was created.
    */
   createFolder(folderConfig, parentFolder, onChangeListeners) {
     this._createGuiIfNotCreated(false);
@@ -119,6 +120,8 @@ class ConfigController {
     if (folderConfig.childFolders) {
       this.createFolders(folderConfig.childFolders, folder);
     }
+
+    return folder;
   }
 
   /**
