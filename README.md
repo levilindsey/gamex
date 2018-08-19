@@ -2,6 +2,8 @@
 
 #### A 3D WebGL-based game engine.
 
+_DISCLAIMER: This has some rough edges and should probably not be used directly within production apps._
+
 _See this in use at [levi.codes/dynamics][demo]!_
 
 This project includes a 3D WebGL-based [graphics framework][grafx], a 3D [physics engine][physx],
