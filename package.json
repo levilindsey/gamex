@@ -1,6 +1,6 @@
 {
   "name": "gamex",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "A 3D WebGL-based game engine",
   "license": "MIT",
   "repository": {
