@@ -42,7 +42,7 @@ Code](./docs/understanding-the-code) for more info.
 
 MIT
 
-[demo]: http://levi.codes/dynamics
+[demo]: http://levi.dev/dynamics
 
 [grafx]: https://github.com/levilindsey/grafx
 [physx]: https://github.com/levilindsey/physx
